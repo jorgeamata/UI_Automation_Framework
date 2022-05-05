@@ -6,22 +6,23 @@ import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
-
+import org.apache.log4j.Logger;
 import org.apache.commons.io.FileUtils;
+import org.apache.logging.log4j.LogManager;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.log4testng.Logger;
+
 
 import com.projectName.utilities.TestUtils;
 
 public class Base {
 	
 	//public static RemoteDriver driver;
-	//public static Logger log = Logger.getLogger(Class.class);
+	public static Logger logger = Logger.getLogger(Class.class);
 	public static WebDriver driver;
 	public static Properties prop;
 	
@@ -30,7 +31,7 @@ public class Base {
 	public Base() {
 		try {
 			prop = new Properties();
-			FileInputStream inputStream = new FileInputStream("C:\\Users\\jalopez5\\eclipse-workspace\\AutomationHybridFramework\\src\\main\\java\\com\\projectName\\config\\system.properties");
+			FileInputStream inputStream = new FileInputStream("C:\\Users\\jalopez5\\eclipse-workspace\\UIAutomationFramework\\src\\main\\java\\com\\projectName\\config\\system.properties");
 			prop.load(inputStream);
 		} catch(FileNotFoundException e) {
 			e.printStackTrace();

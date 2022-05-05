@@ -6,6 +6,7 @@
 	<listeners>
 		<listener class-name = "com.projectName.extentReport.ExtentReporterNG" /> 
 		<listener class-name = "com.projectName.utilities.MyTransfomer" />
+		<listener class-name = "com.projectName.utilities.ListenerTest" />
 	</listeners>
 
   <test name="Regression Test Cases">

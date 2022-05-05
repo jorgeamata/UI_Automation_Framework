@@ -3,14 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.projectName.testScripts.TestCase001">
+      <class name="com.projectName.testScripts.TestLog4J">
         <methods>
-          <include name="tearDown"/>
-          <include name="init"/>
-          <include name="test1"/>
-          <include name="quitDriverSession"/>
+          <include name="testLog4J"/>
         </methods>
-      </class> <!-- com.projectName.testScripts.TestCase001 -->
+      </class> <!-- com.projectName.testScripts.TestLog4J -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
